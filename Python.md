@@ -110,6 +110,16 @@ x.lower()
 ord('z')
 chr(96)
 ```
+
+스트링 체크
+
+```
+import string
+
+string.ascii_lowercase
+string.digits
+```
+
 ## 3.배열
 
 
@@ -185,6 +195,18 @@ False로 초기화된 2차원 배열
 visited = [[False for j in range(n)] for i in range(m)]
 ```
 
+상하좌우로 탐색
+
+```
+dxdy = [(0,1), (0,-1), (1,0),(-1,0)]
+for dx, dy in dxdy:
+	xx = x+dx
+	yy = y+dy
+	findPath(xx, yy)
+```
+
+
+
 # 끝
 틀린 부분이나 추가할 부분이 있다면 PR로 참여해주시거나 drifterz303+3@gmail.com으로 연락주세요^^
 
@@ -196,9 +218,6 @@ visited = [[False for j in range(n)] for i in range(m)]
 # 나중에 정리
 
 ```
-백준알고리즘용
-    read = lambda : sys.stdin.readline()
-
 띄어쓰기 두개 값
     rows, cols = map(int, read().split())
 
